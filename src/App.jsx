@@ -9,17 +9,11 @@ function App() {
   const loggedIn = localStorage.getItem('loggedIn');
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
-      {loggedIn ? (
         <>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/favorites" element={<Favorites />} />
         </>
-      ) : (
-        <Route path="*" element={<Navigate to="/login" />} />
-      )}
-      <Route path="*" element={<Navigate to={loggedIn ? '/' : '/login'} />} />
     </Routes>
   );
 }
