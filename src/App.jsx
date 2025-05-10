@@ -12,7 +12,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       {loggedIn ? (
         <>
-          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
           <Route path="/favorites" element={<Favorites />} />
         </>

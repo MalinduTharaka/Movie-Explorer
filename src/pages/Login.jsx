@@ -12,7 +12,7 @@ export default function Login() {
   const handleLogin = () => {
     // hard-coded check
     if (username === 'admin' && password === 'password') {
-      navigate('/');
+      navigate('/home');
     } else {
       setError('Invalid username or password');
     }
