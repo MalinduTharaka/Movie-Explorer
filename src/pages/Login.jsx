@@ -12,7 +12,6 @@ export default function Login() {
   const handleLogin = () => {
     // hard-coded check
     if (username === 'admin' && password === 'password') {
-      localStorage.setItem('loggedIn', 'true');
       navigate('/');
     } else {
       setError('Invalid username or password');
